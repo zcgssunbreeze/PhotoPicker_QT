@@ -1,0 +1,21 @@
+<RCC>
+    <qresource prefix="/">
+        <file>res/360NMGameAcc.png</file>
+        <file>res/360SysReset_10_52.png</file>
+        <file>res/AavanceTools_360LWiFi.png</file>
+        <file>res/AavanceTools_pic_360TaskMgr.png</file>
+        <file>res/AavanceTools_RouterAssistant_10_52.png</file>
+        <file>res/Comment.ico</file>
+        <file>res/DaqApplication.ico</file>
+        <file>res/DaqComponent.ico</file>
+        <file>res/daqmx.ico</file>
+        <file>res/icon.ico</file>
+        <file>res/ivi.ico</file>
+        <file>res/labview.ico</file>
+        <file>res/namemapicon.ico</file>
+        <file>res/template.ico</file>
+        <file>res/vbbook.ico</file>
+        <file>res/vd1.ico</file>
+        <file>res/Run.ico</file>
+    </qresource>
+</RCC>
