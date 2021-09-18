@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 #include <QMessageBox>
 #include "paramsetdlg.h"
+#include "namemapsetdlg.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -11,7 +12,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     //// 将菜单的信号与其处理函数关联起来 //////////////////////////////////////////////////////////////
     connect(ui->menuParamSet, &QAction::triggered, this, &MainWindow::OnMenuParamSet);
-    connect(ui->menuNameMap, &QAction::triggered, this, &MainWindow::OnMenuNameMap);
+    connect(ui->menuNameMap, &QAction::triggered, this, &MainWindow::OnMenuNameMapSet);
     connect(ui->menuTemplateSet, &QAction::triggered, this, &MainWindow::OnMenuTemplateSet);
     connect(ui->menuStart, &QAction::triggered, this, &MainWindow::OnStopPick);
     connect(ui->menuStop, &QAction::triggered, this, &MainWindow::OnStopPick);
@@ -32,9 +33,11 @@ void MainWindow::OnMenuParamSet()
 }
 
 
-void MainWindow::OnMenuNameMap()
+void MainWindow::OnMenuNameMapSet()
 {
+    NameMapSetDlg dlg(this);
 
+    dlg.exec();
 }
 
 

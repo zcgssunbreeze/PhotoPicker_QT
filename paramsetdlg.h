@@ -28,8 +28,10 @@ public:
     /// 将参数保存到配置文件中 ////////////////////////////////////////
     void WriteParameters(QString strFileName);
 
+    /// 选择工作目录到相应的edit空间里 ////////////////////////////////
+    void SelectWorkDir(QLineEdit* dirEdit);
+
 public slots:
-    void SelectWorkDir(QLineEdit* dirWidget);
     void SaveParameters();
     void ExitDialog();
 

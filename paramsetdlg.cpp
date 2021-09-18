@@ -45,10 +45,12 @@ void ParamSetDlg::MyInitFunc()
         m_bRecvUseFtp = false;
     });
 
-    connect(ui->btnSelRecvDir, &QPushButton::clicked, this, &ParamSetDlg::SelectWorkDir);
-    connect(ui->btnSelPickDir, &QPushButton::clicked, this, &ParamSetDlg::SelectWorkDir);
-    connect(ui->btnSelBackDir, &QPushButton::clicked, this, &ParamSetDlg::SelectWorkDir);
-    connect(ui->btnSelSendDir, &QPushButton::clicked, this, &ParamSetDlg::SelectWorkDir);
+    /// 关联选择工作目录的按钮与选择工作目录的函数，将相应的edit控件作为参数 ///////////////////////////////////
+    connect(ui->btnSelRecvDir, &QPushButton::clicked, this, [=]{ SelectWorkDir(ui->editRecvDir); });
+    connect(ui->btnSelPickDir, &QPushButton::clicked, this, [=]{ SelectWorkDir(ui->editPickDir); });
+    connect(ui->btnSelBackDir, &QPushButton::clicked, this, [=]{ SelectWorkDir(ui->editBackDir); });
+    connect(ui->btnSelSendDir, &QPushButton::clicked, this, [=]{ SelectWorkDir(ui->editSendDir); });
+    /////////////////////////////////////////////////////////////////////////////////////////////////
 
     QString strParamFileName;
 
@@ -98,7 +100,7 @@ bool ParamSetDlg::CheckFileExist(QString strFileName)
     return paramSetFile.isFile();
 }
 
-void ParamSetDlg::SelectWorkDir(QLineEdit* dirWidget)
+void ParamSetDlg::SelectWorkDir(QLineEdit* dirEdit)
 {
     QString strWorkDir;
 
@@ -108,7 +110,7 @@ void ParamSetDlg::SelectWorkDir(QLineEdit* dirWidget)
 
     if(!strWorkDir.isEmpty())
     {
-        dirWidget->setText(strWorkDir);
+        dirEdit->setText(strWorkDir);
     }
 }
 

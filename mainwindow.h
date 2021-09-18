@@ -17,7 +17,7 @@ public:
 
 public slots:
     void OnMenuParamSet();
-    void OnMenuNameMap();
+    void OnMenuNameMapSet();
     void OnMenuTemplateSet();
 
     void OnStartPick();

@@ -18,14 +18,17 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     main.cpp \
     mainwindow.cpp \
+    namemapsetdlg.cpp \
     paramsetdlg.cpp
 
 HEADERS += \
     mainwindow.h \
+    namemapsetdlg.h \
     paramsetdlg.h
 
 FORMS += \
     mainwindow.ui \
+    namemapsetdlg.ui \
     paramsetdlg.ui
 
 TRANSLATIONS += \
